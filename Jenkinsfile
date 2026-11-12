@@ -18,10 +18,10 @@ pipeline{
             }
 
         }
-        stage('SPC_BUILD'){
+        stage('SPC_BUILD_and_RUN_App'){
             steps{
                 sh 'mvn clean package'
-                //sh 'java -jar *.jar'
+                sh 'java -jar target/spring-petclinic*.jar'
             }
         }
         stage('Project_info'){
