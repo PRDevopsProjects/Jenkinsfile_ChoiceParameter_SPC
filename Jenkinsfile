@@ -26,7 +26,7 @@ pipeline{
         }
         stage('Project_info'){
             steps{
-                echo "Branch_Name: $(params.Git_Branch)"
+                echo "Branch_Name: ${params.Git_Branch}"
                 sh 'pwd'
                 sh 'mvn --version'
                 sh 'whoami'
