@@ -21,7 +21,7 @@ pipeline{
         stage('SPC_BUILD'){
             steps{
                 sh 'mvn clean package'
-               
+                //sh 'java -jar *.jar'
             }
         }
         stage('Project_info'){
